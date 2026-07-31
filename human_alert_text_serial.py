@@ -12,7 +12,7 @@ MAX_DISTANCE_CM = 200            # Alert threshold in cm
 COOLDOWN_SECONDS = 60           # Avoid spamming notifications
 
 def send_push_notification(distance_cm):
-    url = f"https://ntfy.sh/{TOPIC_NAME}"
+    url = f"https://ntfy.sh/human_detection_hcp"
     message = f"Alert: Human detected at {distance_cm} cm!"
     try:
         requests.post(url, data=message.encode('utf-8'), timeout=10)
